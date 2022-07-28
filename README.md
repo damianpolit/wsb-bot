@@ -1,4 +1,4 @@
-<h2>**setup:**</h2>
+<h2>setup:</h2>
 - you need to install Node.js and yarn
 
 - `yarn install`
