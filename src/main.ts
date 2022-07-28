@@ -34,14 +34,6 @@ bot.once("ready", async () => {
   // Synchronize applications commands with Discord
   await bot.initApplicationCommands();
 
-  // To clear all guild commands, uncomment this line,
-  // This is useful when moving from guild commands to global commands
-  // It must only be executed once
-  //
-  //  await bot.clearApplicationCommands(
-  //    ...bot.guilds.cache.map((g) => g.id)
-  //  );
-
   console.log("Bot started");
 });
 
@@ -54,11 +46,6 @@ bot.on("messageCreate", (message: Message) => {
 });
 
 async function run() {
-  // The following syntax should be used in the commonjs environment
-  //
-  // await importx(__dirname + "/{events,commands}/**/*.{ts,js}");
-
-  // The following syntax should be used in the ECMAScript environment
   await importx(dirname(import.meta.url) + "/{events,commands}/**/*.{ts,js}");
 
   // Let's start the bot
